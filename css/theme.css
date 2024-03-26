@@ -32,8 +32,10 @@ article {
 }
 
 main {
+  margin-top: calc(8vh + var(--header-height));
   display: inline-block;
   width: 100%;
+  height: var(--remaining-height);
 }
 
 footer {
