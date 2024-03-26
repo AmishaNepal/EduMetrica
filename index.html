@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>EduMetrica</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/home.png" id="header_logo" alt="logo" />
+      <nav>
+        <a href="./page/about.html" class="header_links" target="_blank"
+          ><h4>About</h4></a
+        >
+        <a href="./page/quiz.php" class="header_links"><h4>Revise</h4></a>
+        <a href="#" class="header_links"><h4>Login</h4></a>
+      </nav>
+    </header>
+    <article>
+      <h1 id="hero_text">EduMetrica</h1>
+      <p id="hero_message">Take a quiz and evaluate your proficiency!</p>
+      <br />
+      <a href="#start"><button id="goto_button">Start!</button></a>
+    </article>
+    <main id="start">
+      <form
+        action="./page/quiz.php"
+        method="post"
+        onsubmit="return formValidator()"
+      >
+        <details open>
+          <summary>Grades</summary>
+          <fieldset>
+            <legend>Choose your Grade:</legend>
+            <input type="checkbox" id="class_8" name="grade" value="8" />
+            <label for="class_8">Grade VIII</label><br />
+
+            <input type="checkbox" id="class_9" name="grade" value="9" />
+            <label for="class_9">Grade IX</label><br />
+
+            <input type="checkbox" id="class_10" name="grade" value="10" />
+            <label for="class_10">Grade X</label><br />
+          </fieldset>
+        </details>
+
+        <details open>
+          <summary>Subjects</summary>
+          <fieldset>
+            <legend>Choose only one from the following:</legend>
+            <input type="radio" id="subject_math" name="subject" value="Math" />
+            <label for="subject_math">Math</label><br />
+            
+
+            <input
+              type="radio"
+              id="subject_science"
+              name="subject"
+              value="Science"
+            />
+            <label for="subject_science">Science</label><br />
+
+            <input
+              type="radio"
+              id="subject_computer"
+              name="subject"
+              value="Computer"
+            />
+            <label for="subject_computer">Computer</label><br />
+          </fieldset>
+        </details>
+        
+
+        <input type="submit" value="Take The Quiz!" />
+      </form>
+    </main>
+    <footer>
+      &copy; 2024 - EduMetrica <br />
+      Amisha Nepal and Manish Majhi
+    </footer>
+  </body>
+</html>
